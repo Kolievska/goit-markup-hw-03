@@ -336,20 +336,20 @@ h3 {
 
 /* Card */
 
-.card {
-  border: 1px solid #EEEEEE;
-}
-
 .card-thumb img {
     display: block;
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
 }
 
 .card-content {
   padding-left: 24px;
-  margin-bottom: 20px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-right: 1px solid #EEEEEE;
+  border-left: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
 }
 
 .card-content a {
