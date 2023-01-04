@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer">    
 <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
@@ -25,7 +25,7 @@
           </li>
 
           <li>
-            <a href="./portfolio.html"class="link" >Портфоліо</a>
+            <a href="./portfolio.html" class="link" >Портфоліо</a>
           </li>
 
           <li>
@@ -47,7 +47,7 @@
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero-title">Ефективні рішення для <br> вашого бізнесу</h1>
+        <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
 
         <button type="button" class="hero-button">
           Замовити послугу
@@ -57,7 +57,7 @@
       <!--Переваги-->
       <section class="features section">
        <div class="container">
-        <h2>Переваги</h2>
+        <h2 class="visually-hidden">Переваги</h2>
         <ul class="list features-list">
 
           <li>
@@ -100,23 +100,24 @@
           <h2 class="title">Чим ми займаємося</h2>
 
         <ul class="list images-list">
-          <li>
+          <li class="item">
             <img src="./images/box-1.jpg" alt="Людина працює за комп'ютером"
               width="370">
           </li>
 
-          <li>
+          <li class="item">
             <img src="./images/box-2.jpg" alt="Людина працює за комп'ютером"
               width="370">
           </li>
 
-          <li>
+          <li class="item">
             <img src="./images/box-3.jpg" alt="Людина працює за комп'ютером"
               width="370">
           </li>
         </ul>
+      </div>
       </section>
-        </div>
+      
 
       <section class="team section">
         <div class="container">
@@ -128,32 +129,32 @@
             <img src="./images/img.jpg" alt="Ігор Дем'яненко"
               width="270"
               height="260">
-            <h3 class="team-name">Ігор Дем'яненко</h3>
-            <p lang="en" class="team-position">Product Designer</p>
+              <div class="team-text"> <h3 class="team-name">Ігор Дем'яненко</h3>
+            <p lang="en" class="team-position">Product Designer</p> </div>
           </li>
 
           <li class="team-card">
             <img src="./images/img-1.jpg" alt="Ольга Рєпіна"
               width="270"
               height="260">
-            <h3 class="team-name">Ольга Рєпіна</h3>
-            <p lang="en" class="team-position">Frontend Developer</p>
+            <div class="team-text"><h3 class="team-name">Ольга Рєпіна</h3>
+              <p lang="en" class="team-position">Frontend Developer</p></div>
           </li>
 
           <li class="team-card">
             <img src="./images/img-2.jpg" alt="Микола Тарасов"
               width="270"
               height="260">
-            <h3 class="team-name">Микола Тарасов</h3>
-            <p lang="en" class="team-position">Marketing</p>
+              <div class="team-text"><h3 class="team-name">Микола Тарасов</h3>
+            <p lang="en" class="team-position">Marketing</p> </div>
           </li>
 
           <li class="team-card">
             <img src="./images/img-3.jpg" alt="Михайло Єрмаков"
               width="270"
               height="260">
-            <h3 class="team-name">Михайло Єрмаков</h3>
-            <p lang="en" class="team-position">UI Designer</p>
+              <div class="team-text"><h3 class="team-name">Михайло Єрмаков</h3>
+            <p lang="en" class="team-position">UI Designer</p> </div>
           </li>
 
         </ul>
@@ -161,7 +162,7 @@
       </section>
     </main>
     <footer>
-      <div class="container footer">
+      <div class="container">
         <a href="./index.html" class="logo logo-footer">
           <span lang="en"><span class="logo-accent">Web</span>Studio</span>
         </a>

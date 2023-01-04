@@ -31,6 +31,11 @@ h3 {
   color: var(--title-color);
 }
 
+
+img {
+  display: block;
+}
+
 .list {
   list-style: none;
 }
@@ -50,6 +55,20 @@ h3 {
   /* outline: 2px solid tomato; */
 }
 
+.visually-hidden {
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Header */
 .header-section {
   border-bottom: 1px solid #ececec;
@@ -59,8 +78,6 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .site-nav {
@@ -86,7 +103,7 @@ h3 {
 }
 
 .logo-header {
-  padding-right: 93px;
+  margin-right: 93px;
   color: #000;
 }
 
@@ -102,6 +119,10 @@ h3 {
 }
 
 .nav-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-color);
   text-decoration: none;
   font-style: normal;
@@ -149,13 +170,18 @@ h3 {
 /* Hero*/
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: #2f303a;
   text-align: center;
 }
 
 .hero-title {
-  padding-top: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  max-width: 696px;
 
   font-size: 44px;
   line-height: 1.36;
@@ -167,7 +193,6 @@ h3 {
 }
 
 .hero-button {
-  margin-bottom: 200px;
   padding-left: 32px;
   padding-right: 32px;
   padding-top: 10px;
@@ -193,20 +218,19 @@ h3 {
 }
 
 /* Features */
-.features-list {
-  display: flex;
+
+.features {
+  padding-bottom: 0;
 }
 
-.features h2 {
-  display: none;
+.features-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 30px;
 }
 
 .features-list li {
-  width: 270px;
-}
-
-.features-list li:not(:last-child) {
-  margin-right: 30px;
+  flex-basis: calc((100% - 90px) / 4 );
 }
 
 .features h3 {
@@ -226,11 +250,12 @@ h3 {
 
 .images-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.images-list > li > img {
-  display: block;
+.images-list > .item {
+  flex-basis: calc((100% - 60px) / 3 );
 }
 
 /* Team */
@@ -249,17 +274,24 @@ h3 {
 
 .team-list {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team-card {
+  flex-basis: calc((100% - 90px) / 4 );
   background-color: #ffffff;
   text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
 }
 
-.team-card > img {
-  display: block;
-  margin-bottom: 30px;
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .team-name {
@@ -271,17 +303,12 @@ h3 {
 }
 
 .team-position {
-  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
 /* Portfolio */
-
-.portfolio h1 {
-  display: none;
-}
 
 .portfolio-nav {
   display: flex;
@@ -322,39 +349,33 @@ h3 {
 .portfolio-set {
   display: flex;
   flex-wrap: wrap;
-  margin-left: calc(-1* var(--portfolio-set-gap));
-  margin-top: calc(-1* var(--portfolio-set-gap));
+  gap: var(--portfolio-set-gap);
 }
 
 .portfolio-set > .item  {
-  margin-left: 0;
-  margin-right: 0;
-  flex-basis: calc(100% / 3 - var(--portfolio-set-gap));
-  margin-left: var(--portfolio-set-gap);
-  margin-top: var(--portfolio-set-gap);
+  flex-basis: calc((100% - 60px) / 3 );
 }
 
 /* Card */
 
+.portfolio-set a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
 .card-thumb img {
-    display: block;
     max-width: 100%;
     height: auto;
 }
 
 .card-content {
-  padding-left: 24px;
-  padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
   border-right: 1px solid #EEEEEE;
   border-left: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
-}
-
-.card-content a {
-  color: var(--primary-color);
-  text-decoration: none;
 }
 
 .card-content h2 {
@@ -375,9 +396,6 @@ h3 {
 
 footer {
   background-color: #2f303a;
-}
-
-.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
